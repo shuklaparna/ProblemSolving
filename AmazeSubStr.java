@@ -15,3 +15,24 @@ public class AmazeSubStr {
         return (int)(count % mod);
     }
 }
+
+//Another Solution
+public class Solution {
+    public int solve(String str) {
+        int count = 0;
+        Character[] v = {'a', 'e', 'i', 'o', 'u'};
+        Set<Character> vowel = new HashSet<>(Arrays.asList(v));
+
+        //ABEC
+        for (int i = 0; i < str.length(); i++) {
+            Character ch = Character.toLowerCase(str.charAt(i));
+            if (vowel.contains(ch)) {
+                count += str.length() - i;
+                if (count > 10003) {
+                    count %= 10003;
+                }
+            }
+        }
+        return count;
+    }
+}
