@@ -55,3 +55,53 @@ public class PalindromeOneChar {
             return "NO";
     }
 }
+
+//Another Method
+public class Solution {
+    public String solve(String A) {
+
+        String s = new String(A);
+        int j = s.length(), len = j, i = 0;
+        j = j-1;
+        int count = 0;
+        String ans = new String();
+        if (checkPalindrome(s))
+        {
+            if(len%2 == 1)
+                ans = "YES";
+            else
+                ans = "NO";
+        }
+        
+        else
+        {
+            while(i<=j)
+            {
+                if(s.charAt(i) != s.charAt(j))
+                    count++;
+                    i++;
+                    j--;
+
+            }
+
+                if(count>1)
+                    ans = "NO";
+                else
+                    ans = "YES";
+
+        }
+        return ans;
+    }
+    
+    Boolean checkPalindrome(String s)
+    {
+        int l = s.length();
+        for(int i=0;i<l;i++)
+        {
+            if(s.charAt(i) != s.charAt(l-1-i))
+                return false;
+        }
+        
+        return true;
+    }
+}
