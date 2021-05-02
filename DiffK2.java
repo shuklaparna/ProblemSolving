@@ -31,7 +31,7 @@ public class Solution {
 	            value++;
 	            hashMap.put(num, value);
 	        } else {
-	            hashMap.put(num, 1);
+	            hashMap.put(0, 1);
 	        }
 	    }
 	    for (int num : A) {
