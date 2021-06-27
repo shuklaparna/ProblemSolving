@@ -1,5 +1,7 @@
 /* K CLosest points to origin
-https://leetcode.com/problems/k-closest-points-to-origin/ */
+https://leetcode.com/problems/k-closest-points-to-origin/ 
+https://www.geeksforgeeks.org/find-k-closest-points-to-the-origin/
+https://www.geeksforgeeks.org/find-the-k-closest-points-to-origin-using-priority-queue/ */
 
 //FirstMethod (ArrayList) TC:O(N)
 public class CloseOriginK {
